@@ -34,7 +34,178 @@ h1{font-size:17px;font-weight:600;margin-bottom:12px;color:#111}
 </div>
 
 <script>
-var DATA = window.TASK_DATA || [];
+var DATA = {
+  "tasks": [
+    {
+      "id": "1778908739017",
+      "type": "commitment",
+      "content": "跟完 7412 供应商报价交期确认（FCA上海 4周）",
+      "status": "in_progress",
+      "createdAt": "2026-05-16T05:18:59.017Z",
+      "statusHistory": [
+        {
+          "status": "pending",
+          "timestamp": "2026-05-16T05:18:59.036Z"
+        },
+        {
+          "status": "in_progress",
+          "timestamp": "2026-05-16T05:19:19.290Z",
+          "note": "已联系FCA确认交期"
+        }
+      ]
+    },
+    {
+      "id": "1778908753337",
+      "type": "commitment",
+      "content": "跟完 7414 供应商报价（DAP莫斯科 180天）",
+      "status": "pending",
+      "createdAt": "2026-05-16T05:19:13.337Z",
+      "statusHistory": [
+        {
+          "status": "pending",
+          "timestamp": "2026-05-16T05:19:13.337Z"
+        }
+      ]
+    },
+    {
+      "id": "1778908753349",
+      "type": "commitment",
+      "content": "上海乾亦服务费报价成单转化追踪",
+      "status": "pending",
+      "createdAt": "2026-05-16T05:19:13.349Z",
+      "statusHistory": [
+        {
+          "status": "pending",
+          "timestamp": "2026-05-16T05:19:13.349Z"
+        }
+      ]
+    },
+    {
+      "id": "1778908753341",
+      "type": "commitment",
+      "content": "建立 RTX PRO 5000 GPU 测试体系",
+      "status": "pending",
+      "createdAt": "2026-05-16T05:19:13.341Z",
+      "statusHistory": [
+        {
+          "status": "pending",
+          "timestamp": "2026-05-16T05:19:13.341Z"
+        }
+      ]
+    },
+    {
+      "id": "1778908753347",
+      "type": "commitment",
+      "content": "整理周会材料（服务器+AI小组）",
+      "status": "pending",
+      "createdAt": "2026-05-16T05:19:13.347Z",
+      "statusHistory": [
+        {
+          "status": "pending",
+          "timestamp": "2026-05-16T05:19:13.347Z"
+        }
+      ]
+    },
+    {
+      "id": "1778903979342",
+      "type": "commitment",
+      "content": "完成 MCP 端到端验证测试",
+      "status": "completed",
+      "createdAt": "2026-05-16T03:59:39.342Z",
+      "statusHistory": [
+        {
+          "status": "pending",
+          "timestamp": "2026-05-16T03:59:39.360Z"
+        },
+        {
+          "status": "in_progress",
+          "timestamp": "2026-05-16T03:59:54.664Z",
+          "note": "正在验证 MCP 工具链"
+        },
+        {
+          "status": "completed",
+          "timestamp": "2026-05-16T04:00:00.705Z",
+          "note": "全链路验证通过"
+        }
+      ],
+      "completionNote": "全链路验证通过"
+    },
+    {
+      "id": "1778916972886",
+      "type": "commitment",
+      "content": "重启后持久化验证",
+      "status": "pending",
+      "createdAt": "2026-05-16T07:36:12.886Z",
+      "statusHistory": [
+        {
+          "status": "pending",
+          "timestamp": "2026-05-16T07:36:12.887Z"
+        }
+      ]
+    },
+    {
+      "id": "1778917094554",
+      "type": "commitment",
+      "content": "自动通知测试",
+      "status": "completed",
+      "createdAt": "2026-05-16T07:38:14.554Z",
+      "statusHistory": [
+        {
+          "status": "pending",
+          "timestamp": "2026-05-16T07:38:14.556Z"
+        },
+        {
+          "status": "in_progress",
+          "timestamp": "2026-05-16T07:38:21.089Z",
+          "note": "开始处理通知测试"
+        },
+        {
+          "status": "completed",
+          "timestamp": "2026-05-16T07:38:30.322Z",
+          "note": "通知链路全部跑通"
+        }
+      ],
+      "completionNote": "通知链路全部跑通"
+    },
+    {
+      "id": "1778917178552",
+      "type": "commitment",
+      "content": "整理英伟达开发者大会会议纪要",
+      "status": "completed",
+      "createdAt": "2026-05-16T07:39:38.552Z",
+      "statusHistory": [
+        {
+          "status": "pending",
+          "timestamp": "2026-05-16T07:39:38.556Z"
+        },
+        {
+          "status": "in_progress",
+          "timestamp": "2026-05-16T07:39:46.844Z",
+          "note": "开始整理超聚变培训录音"
+        },
+        {
+          "status": "completed",
+          "timestamp": "2026-05-16T07:39:55.113Z",
+          "note": "录音已整理完毕，超聚变CEO培训核心要点已提炼"
+        }
+      ],
+      "completionNote": "录音已整理完毕，超聚变CEO培训核心要点已提炼"
+    },
+    {
+      "id": "1778919144700",
+      "type": "commitment",
+      "content": "联系南京审元客户确认需求文档",
+      "status": "pending",
+      "createdAt": "2026-05-16T08:12:24.700Z",
+      "statusHistory": [
+        {
+          "status": "pending",
+          "timestamp": "2026-05-16T08:12:24.702Z"
+        }
+      ]
+    }
+  ]
+};
 var COLS = [
   {key:'pending',label:'待办',bg:'#FFF8E1',bc:'#FFE082',badge:'#E65100'},
   {key:'in_progress',label:'进行中',bg:'#E3F2FD',bc:'#90CAF9',badge:'#1565C0'},
