@@ -57,14 +57,18 @@ h1{font-size:17px;font-weight:600;margin-bottom:12px;color:#111}
 </div>
 
 <script>
-// 访问密码（SHA-256 hash）
+// 访问密码（SHA-256 hash of "workflow2026"）
 var PASS_HASH='6bee0697eab3552f6c2f1807c953c9e7cdc256233f2c67590e3ab5d988fc9469';
 
-function sha256(s){for(var a=function(b,c){var d=(b&65535)+(c&65535);return((b>>16)+(c>>16)+(d>>16))<<16|d&65535},e=function(b,c,d,f,g,h){return a(a(a(c,b),a(f,h)),a(g,d))},f=function(b,c,d,f,g,h,i){return a(e(c&d|~c&f,b,c,g,h,i),f,b)},g=function(b,c,d,f,g,h,i){return a(e(c&f|d&~f,b,c,g,h,i),f,b)},h=function(b,c,d,f,g,h,i){return a(e(c^d^f,b,c,g,h,i),f,b)},j=function(b,c,d,f,g,h,i){return a(e(d^(c|~f),b,c,g,h,i),f,b)},k=function(b){for(var c=1518500249,d=1859775393,e=2400959708,f=3395469782,l=b.length,m=l+8,n=((m-m%64)/64+1)*16,o=new Array(n-1),p=0,q=0;q<l;){o[p++]=(q-m%4*8)*8<=32?b.charCodeAt(q):0;q++}o[p]=128;for(q=p+1;q<n;q++)o[q]=0;o[n-2]=l<<3;o[n-1]=l>>>29;var r=1732584193,s=4023233417,t=2562383102,u=271733878,v=3285377520;for(q=0;q<n;q+=16){var w=r,x=s,y=t,z=u,A=v;r=f(r,s,t,u,o[q],7,c);u=f(u,r,s,t,o[q+1],12,c);t=f(t,u,r,s,o[q+2],17,c);s=f(s,t,u,r,o[q+3],22,c);r=f(r,s,t,u,o[q+4],7,c);u=f(u,r,s,t,o[q+5],12,c);t=f(t,u,r,s,o[q+6],17,c);s=f(s,t,u,r,o[q+7],22,c);r=f(r,s,t,u,o[q+8],7,c);u=f(u,r,s,t,o[q+9],12,c);t=f(t,u,r,s,o[q+10],17,c);s=f(s,t,u,r,o[q+11],22,c);r=f(r,s,t,u,o[q+12],7,c);u=f(u,r,s,t,o[q+13],12,c);t=f(t,u,r,s,o[q+14],17,c);s=f(s,t,u,r,o[q+15],22,c);r=g(r,s,t,u,o[q+1],5,d);u=g(u,r,s,t,o[q+6],9,d);t=g(t,u,r,s,o[q+11],14,d);s=g(s,t,u,r,o[q],20,d);r=g(r,s,t,u,o[q+5],5,d);u=g(u,r,s,t,o[q+10],9,d);t=g(t,u,r,s,o[q+15],14,d);s=g(s,t,u,r,o[q+4],20,d);r=g(r,s,t,u,o[q+9],5,d);u=g(u,r,s,t,o[q+14],9,d);t=g(t,u,r,s,o[q+3],14,d);s=g(s,t,u,r,o[q+8],20,d);r=g(r,s,t,u,o[q+13],5,d);u=g(u,r,s,t,o[q+2],9,d);t=g(t,u,r,s,o[q+7],14,d);s=g(s,t,u,r,o[q+12],20,d);r=h(r,s,t,u,o[q+5],4,e);u=h(u,r,s,t,o[q+8],11,e);t=h(t,u,r,s,o[q+11],16,e);s=h(s,t,u,r,o[q+14],23,e);r=h(r,s,t,u,o[q+1],4,e);u=h(u,r,s,t,o[q+4],11,e);t=h(t,u,r,s,o[q+7],16,e);s=h(s,t,u,r,o[q+10],23,e);r=h(r,s,t,u,o[q+13],4,e);u=h(u,r,s,t,o[q],11,e);t=h(t,u,r,s,o[q+3],16,e);s=h(s,t,u,r,o[q+6],23,e);r=h(r,s,t,u,o[q+9],4,e);u=h(u,r,s,t,o[q+12],11,e);t=h(t,u,r,s,o[q+15],16,e);s=h(s,t,u,r,o[q+2],23,e);r=j(r,s,t,u,o[q],6,f);u=j(u,r,s,t,o[q+7],10,f);t=j(t,u,r,s,o[q+14],15,f);s=j(s,t,u,r,o[q+5],21,f);r=j(r,s,t,u,o[q+12],6,f);u=j(u,r,s,t,o[q+3],10,f);t=j(t,u,r,s,o[q+10],15,f);s=j(s,t,u,r,o[q+1],21,f);r=j(r,s,t,u,o[q+8],6,f);u=j(u,r,s,t,o[q+15],10,f);t=j(t,u,r,s,o[q+6],15,f);s=j(s,t,u,r,o[q+13],21,f);r=j(r,s,t,u,o[q+4],6,f);u=j(u,r,s,t,o[q+11],10,f);t=j(t,u,r,s,o[q+2],15,f);s=j(s,t,u,r,o[q+9],21,f);r=a(r,w);s=a(s,x);t=a(t,y);u=a(u,z);v=a(v,A)}return(r>>>0).toString(16).padStart(8,'0')+(s>>>0).toString(16).padStart(8,'0')+(t>>>0).toString(16).padStart(8,'0')+(u>>>0).toString(16).padStart(8,'0')}
+async function sha256(str){
+  var buf=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(str));
+  return Array.from(new Uint8Array(buf)).map(function(b){return b.toString(16).padStart(2,'0')}).join('');
+}
 
-function unlock(){
+async function unlock(){
   var pw=document.getElementById('pwInput').value;
-  if(sha256(pw)===PASS_HASH){
+  var hash=await sha256(pw);
+  if(hash===PASS_HASH){
     document.getElementById('lockScreen').style.display='none';
     document.getElementById('boardContent').style.display='block';
     sessionStorage.setItem('wfm_auth','1');
